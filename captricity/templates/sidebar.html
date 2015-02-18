@@ -1,0 +1,23 @@
+<div class="col-md-2 sidebar">
+  <div class="user_info">
+      {% if current_user.username %}
+          Hi, {{ current_user.username }}!<br>
+          You are logged in<br>
+        <a href="{{ url_for('auth.logout') }}">logout</a>
+      {% else %}
+        You are not logged in.<br>
+        <a href="{{ url_for('auth.login') }}">login</a> or <a href="{{ url_for('auth.new_user') }}">Create Account</a>
+      {% endif %}
+  </div>
+  {% if current_user.username %}
+      <div class="navigation">
+          <h4>Navigation</h4>
+          <ul>
+              <li><a href="{{ url_for("base_views.index") }}">Home</a></li>
+              <li><a href="{{ url_for("image_views.upload") }}">Upload Image</a></li>
+              <li><a href="{{ url_for("image_views.my_images") }}">View Images</a></li>
+          </ul>
+      </div>
+  {% endif %}
+</div>
+

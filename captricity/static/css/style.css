@@ -1,0 +1,37 @@
+.header {
+    width: 100%;
+    height: 5em;
+}
+.banner {
+    text-align: center;
+}
+.user_info {
+    vertical-align: bottom;
+    padding-top: 1em;
+}
+.navigation{
+    padding: 1em 0em;
+}
+.navigation ul {
+    list-style-type: none;
+    padding-left: 1em;
+}
+.content {
+    padding: 1em;
+}
+
+.main{
+    margin: 2em;
+}
+
+ul.messages{
+    list-style: none;
+}
+
+.messages{
+    color: green;
+}
+
+.error{
+    color: red;
+}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Uploaded Images{% endblock %}
+
+{% block links %}
+    {{ super()}}
+    <script src="{{ url_for('static', filename='js/list_images.js') }}"></script>
+    <script>
+$( document ).ready(
+        function(){
+            loader = new imageLoader({{ page }}, "#images", "{{ url_for('image_views.image_api') }}");
+            });
+    </script>
+{% endblock %}
+
+
+{% block content %}
+    <div id=images>
+    </div>
+{% endblock %}

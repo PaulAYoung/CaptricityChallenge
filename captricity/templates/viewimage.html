@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %}{{ image.title }}{% endblock %}
+
+{% block content %}
+Title: {{ image.title }}<br>
+<a href="{{ url_for("image_views.delete_image", image_id=image.id) }}">Delete</a><br>
+<img src="{{ url_for("image_views.raw_image", image_path=image.path) }}" alt={{image.title}}>
+{% endblock %}% endblock %}
